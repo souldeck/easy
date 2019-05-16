@@ -2,18 +2,33 @@ package gugudanself;
 
 public class array {
 	public static void main(String[] args) {
-		//반복문 while
-		int i = 0; //값 초기화. 통상적으로 i는 반복문을 종료시키기 위한 변수값 지정문자로 쓰임. 
-		while(i<1) { // while: 괄호 안의 조건이 true일때 코드를 반복시킨다.
-			System.out.println("i실행"+i+"번째");
-//가능	    i=++i;
-			i++;
-			//i=i++ 일시 i=0으로 무한 반복됨. 
-			
-		}
-		//반복문 for
-		for(int i2=0; i2<10; i2++) {
-			System.out.println("for문실행"+i2+"번쨰");
+		// 배열 만들기
+		// 배열의 이름은 클래스 그룹. 각각의 이름 지정. 크기는 3
+		String[] classGroup = { "이경하", "오경화", "로버"} ;
+		// 배열 꺼내기
+		System.out.println(classGroup[0]);
+		System.out.println(classGroup[1]);
+		System.out.println(classGroup[2]);
+//에러     System.out.println(classGroup[3]); 
+	
+		// 배열의 크기를 아라보자		
+		String[] classGroup2 = new String[4];
+		classGroup[0] = "이경하"; //값을 초기화 시키는 과정 
+		System.out.println(classGroup2.length);
+		System.out.println(classGroup2[1]);//=null. 값을 지정해주지 않은 배열.
+		classGroup[1] = "오경화";
+		System.out.println(classGroup2.length);
+		classGroup[2] = "로버";
+		System.out.println(classGroup2.length);
+	
+	    // 배열과 반복문의 결합
+		String[] members = {"냥식","냥순","쌔미"};
+		for(int i=0; i<members.length;i++) { 
+			//i<3일때까지 i[n] 배열 안의 결과값을 출력하라
+			String member = members[i];
+			System.out.println(member+"고양이가 사료를 먹었습니다.");
 		}
 	}
 }
+
+		
